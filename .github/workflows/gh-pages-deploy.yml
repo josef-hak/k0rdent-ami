@@ -5,26 +5,16 @@ on:
     branches:
       - '**'
     paths:
-      - apps/**/data.yaml
-      - apps/**/hunspell_dict.txt
       - mkdocs.yml
       - mkdocs/**
-      - overrides/**
       - scripts/deploy_web.sh
-      - scripts/generate_index.py
-      - scripts/gen_app_pages.py
       - .github/workflows/gh-pages-deploy.yml
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - apps/**/data.yaml
-      - apps/**/hunspell_dict.txt
       - mkdocs/**
-      - overrides/**
       - mkdocs.yml
       - scripts/deploy_web.sh
-      - scripts/generate_index.py
-      - scripts/gen_app_pages.py
       - .github/workflows/gh-pages-deploy.yml
 
 permissions:
@@ -51,7 +41,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install -r scripts/requirements.txt
+          pip install -r requirements.txt
 
       - name: Test web pages build
         env:
@@ -60,19 +50,6 @@ jobs:
           echo "REPO: $GITHUB_CONTEXT"
           mkdocs build
 
-      - name: Web pages spell check
-        run: |
-          sudo apt update
-          sudo apt install -y hunspell hunspell-en-us
-          ./scripts/validate_spellcheck_configs.sh
-          ./scripts/spellcheck.sh
-
-      - name: Build and Deploy pages - fork
-        if: github.repository != 'k0rdent/catalog'
-        run: |
-          SITE_URL=${{ vars.SITE_URL }} ./scripts/deploy_web.sh
-
-      - name: Build and Deploy pages - k0rdent/catalog
-        if: github.repository == 'k0rdent/catalog' && github.ref == 'refs/heads/main'
+      - name: Build and Deploy pages
         run: |
           SITE_URL=${{ vars.SITE_URL }} ./scripts/deploy_web.sh
