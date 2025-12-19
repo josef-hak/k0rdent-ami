@@ -1,5 +1,5 @@
-site_name: Documentation
-site_description: Documentation for k0rdent.
+site_name: k0rdent Enterprise Images
+site_description: Documentation for k0rdent Enterprise Images.
 site_author: Mirantis, Inc.
 
 docs_dir: docs/
@@ -70,7 +70,7 @@ plugins:
   - include-markdown
 
 nav:
-  - Welcome to the docs: index.md
+  - AWS AMI Image: aws-ami.md
 
 markdown_extensions:
   - callouts
@@ -100,7 +100,6 @@ markdown_extensions:
           case: lower
   - toc:
       permalink: "#"
-      toc_depth: 3
   - def_list
 
 extra:
