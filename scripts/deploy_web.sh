@@ -12,30 +12,6 @@ fi
 
 # Build gh pages with a different versions support
 rm -rf mkdocs/apps mkdocs/infra
-VERSION="v0.1.0" mkdocs build # generate md files
-VERSION="v0.1.0" mike deploy v0.1.0
-rm -rf mkdocs/apps mkdocs/infra
-VERSION="v0.2.0" mkdocs build # generate md files
-VERSION="v0.2.0" mike deploy v0.2.0
-rm -rf mkdocs/apps mkdocs/infra
-VERSION="v0.3.0" mkdocs build # generate md files
-VERSION="v0.3.0" mike deploy v0.3.0
-rm -rf mkdocs/apps mkdocs/infra
-VERSION="v1.0.0" mkdocs build # generate md files
-VERSION="v1.0.0" mike deploy v1.0.0
-rm -rf mkdocs/apps mkdocs/infra
-VERSION="v1.1.1" mkdocs build # generate md files
-VERSION="v1.1.1" mike deploy v1.1.1
-rm -rf mkdocs/apps mkdocs/infra
-VERSION="v1.2.0" mkdocs build # generate md files
-VERSION="v1.2.0" mike deploy v1.2.0
-rm -rf mkdocs/apps mkdocs/infra
-VERSION="v1.3.1" mkdocs build # generate md files
-VERSION="v1.3.1" mike deploy v1.3.1
-rm -rf mkdocs/apps mkdocs/infra
-VERSION="v1.4.0" mkdocs build # generate md files
-VERSION="v1.4.0" mike deploy v1.4.0
-rm -rf mkdocs/apps mkdocs/infra
 VERSION="v1.5.0" mkdocs build # generate md files
 VERSION="v1.5.0" mike deploy v1.5.0
 rm -rf mkdocs/apps mkdocs/infra
