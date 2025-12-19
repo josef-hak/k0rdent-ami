@@ -1,9 +1,0 @@
-st-charts:
-- name: amd-gpu-operator
-  dep_name: gpu-operator-charts
-  version: v1.2.2
-  repository: https://rocm.github.io/gpu-operator
-- name: amd-gpu-operator
-  dep_name: gpu-operator-charts
-  version: v1.3.0
-  repository: https://rocm.github.io/gpu-operator

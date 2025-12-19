@@ -1,6 +1,0 @@
-open-webui:
-  open-webui:
-    pipelines:
-      enabled: false
-    persistence:
-      enabled: false

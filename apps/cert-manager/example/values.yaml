@@ -1,4 +1,0 @@
-cert-manager:
-  cert-manager:
-    crds:
-      enabled: false  # default

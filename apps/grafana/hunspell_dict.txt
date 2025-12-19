@@ -1,6 +1,0 @@
-OpsGenie
-PagerDuty
-VictorOps
-datasources
-drilldown
-dropdowns

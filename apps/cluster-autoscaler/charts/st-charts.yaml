@@ -1,5 +1,0 @@
-st-charts:
-- name: cluster-autoscaler
-  dep_name: cluster-autoscaler
-  version: 9.45.0
-  repository: https://kubernetes.github.io/autoscaler

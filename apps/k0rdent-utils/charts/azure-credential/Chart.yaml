@@ -1,5 +1,0 @@
-apiVersion: v2
-name: azure-credential
-description: k0rdent Azure credential setup
-type: application
-version: 1.0.0

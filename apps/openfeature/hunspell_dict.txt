@@ -1,3 +1,0 @@
-flagd
-OpenFeature
-SDK

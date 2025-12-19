@@ -1,8 +1,0 @@
-apiVersion: v2
-name: example
-type: application
-version: 4.21.3
-dependencies:
-  - name: falco
-    version: 6.4.0
-    repository: oci://ghcr.io/k0rdent/catalog/charts

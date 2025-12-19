@@ -1,3 +1,0 @@
-HPC
-Slurm
-soperator

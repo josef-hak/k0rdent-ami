@@ -1,5 +1,0 @@
-st-charts:
-- name: prometheus
-  dep_name: prometheus
-  version: 27.5.1
-  repository: https://prometheus-community.github.io/helm-charts

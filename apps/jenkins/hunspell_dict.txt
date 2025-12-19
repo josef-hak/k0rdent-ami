@@ -1,6 +1,0 @@
-APM
-RESTful
-SDLC
-jenkins
-jenkinsci
-lts

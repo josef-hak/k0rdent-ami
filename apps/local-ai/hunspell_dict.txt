@@ -1,7 +1,0 @@
-Elevenlabs
-Ettore
-Giacinto
-LLMs
-LocalAI
-inferencing
-mudler

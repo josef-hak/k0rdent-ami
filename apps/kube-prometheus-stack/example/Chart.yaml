@@ -1,8 +1,0 @@
-apiVersion: v2
-name: example
-type: application
-version: 1.0.0
-dependencies:
-  - name: kube-prometheus-stack
-    version: 77.0.0
-    repository: oci://ghcr.io/k0rdent/catalog/charts

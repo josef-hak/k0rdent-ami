@@ -1,5 +1,0 @@
-st-charts:
-- name: victoriametrics
-  dep_name: victoria-metrics-single
-  version: 0.22.0
-  repository: https://victoriametrics.github.io/helm-charts/
