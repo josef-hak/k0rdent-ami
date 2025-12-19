@@ -1,5 +1,0 @@
-st-charts:
-- name: kubecost
-  dep_name: cost-analyzer
-  version: 2.5.3
-  repository: https://kubecost.github.io/cost-analyzer/

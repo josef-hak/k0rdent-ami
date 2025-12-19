@@ -1,5 +1,0 @@
-st-charts:
-  - name: finops-agent-kof
-    dep_name: finops-agent-kof
-    version: 0.1.3
-    repository: oci://ghcr.io/mirantis/charts

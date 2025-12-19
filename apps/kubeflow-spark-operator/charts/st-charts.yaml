@@ -1,5 +1,0 @@
-st-charts:
-- name: kubeflow-spark-operator
-  dep_name: spark-operator
-  version: 2.3.0
-  repository: https://kubeflow.github.io/spark-operator

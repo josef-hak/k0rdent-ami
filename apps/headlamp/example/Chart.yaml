@@ -1,8 +1,0 @@
-apiVersion: v2
-name: example
-type: application
-version: 1.0.0
-dependencies:
-  - name: headlamp
-    version: 0.32.1
-    repository: oci://ghcr.io/k0rdent/catalog/charts

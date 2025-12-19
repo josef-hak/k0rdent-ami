@@ -1,5 +1,0 @@
-st-charts:
-- name: valkey
-  dep_name: valkey
-  version: 0.1.0
-  repository: oci://ghcr.io/k0rdent/catalog/charts/

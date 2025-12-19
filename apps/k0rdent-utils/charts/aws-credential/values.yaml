@@ -1,9 +1,0 @@
-# # Optional secrets to be exported to managed aws clusters
-# secrets:
-# - name: tokens
-#   namespace: external-dns
-#   fields: [cloudflare]
-secrets:
-
-# k0rdent API version used in ServiceTemplate object.
-k0rdentApiVersion: "v1beta1"

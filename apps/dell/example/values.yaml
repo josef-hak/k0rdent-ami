@@ -1,4 +1,0 @@
-dell-container-storage-modules:
-  container-storage-modules:
-    cert-manager:
-      enabled: true

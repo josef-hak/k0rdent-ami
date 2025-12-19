@@ -1,6 +1,0 @@
-clearml-serving:
-  clearml-serving:
-    kafka: {enabled: false}
-    prometheus: {enabled: false}
-    grafana: {enabled: false}
-    clearml_serving_triton: {enabled: false}

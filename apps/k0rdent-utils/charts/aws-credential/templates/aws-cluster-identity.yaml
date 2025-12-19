@@ -1,9 +1,0 @@
-apiVersion: infrastructure.cluster.x-k8s.io/v1beta2
-kind: AWSClusterStaticIdentity
-metadata:
-  name: aws-cluster-identity
-  labels:
-    k0rdent.mirantis.com/component: "kcm"
-spec:
-  secretRef: aws-credential-secret
-  allowedNamespaces: {}

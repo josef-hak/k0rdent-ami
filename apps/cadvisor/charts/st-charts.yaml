@@ -1,5 +1,0 @@
-st-charts:
-- name: cadvisor
-  dep_name: cadvisor
-  version: 2.3.3
-  repository: https://ckotzbauer.github.io/helm-charts

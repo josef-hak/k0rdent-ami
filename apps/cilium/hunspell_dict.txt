@@ -1,5 +1,0 @@
-eBPF
-L3
-dataplane
-kube
-tracepoints

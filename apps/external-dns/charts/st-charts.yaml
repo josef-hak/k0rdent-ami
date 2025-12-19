@@ -1,9 +1,0 @@
-st-charts:
-- name: external-dns
-  dep_name: external-dns
-  version: 1.15.1
-  repository: https://kubernetes-sigs.github.io/external-dns/
-- name: external-dns
-  dep_name: external-dns
-  version: 1.19.0
-  repository: https://kubernetes-sigs.github.io/external-dns/

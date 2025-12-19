@@ -1,5 +1,0 @@
-mlflow:
-  mlflow:
-    backendStore:
-      postgres:
-        enabled: false
