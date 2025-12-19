@@ -1,74 +1,58 @@
-site_name: k0rdent Catalog
+site_name: Documentation
 site_description: Documentation for k0rdent.
-repo_name: GitHub
 site_author: Mirantis, Inc.
-repo_url: https://github.com/k0rdent/catalog
+
+docs_dir: docs/
+repo_name: k0rdent/kcm
+repo_url: https://github.com/k0rdent/kcm
+edit_uri: https://github.com/k0rdent/docs/edit/main/docs/
 
 copyright:
   Copyright &copy; 2025 The k0rdent authors | Documentation distributed under <a href="https://creativecommons.org/licenses/by/4.0/legalcode.txt">CC-BY-4.0</a>.
-
-docs_dir: mkdocs
-
-nav:
-- k0rdent Catalog: index.md
 
 theme:
   name: "material"
   highlightjs: true
   language: "en"
-  favicon: img/favicon.ico
-  logo: img/k0rdent-catalog-logo-title.svg
-  custom_dir: overrides
-  
+  custom_dir: docs/custom_theme
+
+  favicon: img/k0rdent-logo-mark-inverted.svg
+  logo: img/k0rdent-logo-horizontal-inverted.svg
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
   features:
-    # - announce.dismiss
-    # - content.code.annotate
+    - toc.autohide
+    - search.suggest
+    - search.highlight
     - content.code.copy
-    # - content.code.select
-    # - content.footnote.tooltips
-    - content.tabs.link
-    # - content.tooltips
-    # - header.autohide
-    # - navigation.expand
-    # - navigation.footer
-    # - navigation.indexes
-    # - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
-    # - navigation.prune
-    # - navigation.sections
+    - navigation.tracking   # Anchor tracking
+    - toc.follow            # Sidebar is automatically scrolled so that the active anchor is always visible
+    - search.suggest        # Search suggestions
+    - search.highlight      # Search highlights all occurrences after following the link
+    - content.action.edit
+    - content.action.view
+    - navigation.path       # Not working, for sponsors only
+    - navigation.indexes
     # - navigation.tabs
     # - navigation.tabs.sticky
-    # - navigation.top
-    - navigation.tracking
-    - search.highlight
-    - search.share
-    - search.suggest
-    # - toc.follow
-    # - toc.integrate
 
 extra_css:
-  - extra.css
+  - stylesheets/extra.css
 
 extra_javascript:
-  - js/tablesort.min.js
-  - js/tablesort.js
-
-extra:
-  version:
-    provider: mike
-  analytics:
-    provider: plausible
-    domain: catalog.k0rdent.io
+  - javascripts/feedback.js
+  - javascripts/plausible.js
 
 plugins:
   - search
-  - tags
-  - mike
-  - gen-files:
-      scripts:
-        - scripts/gen_app_pages.py
-        - scripts/generate_index.py
   - ezglossary:
       section_config:
         - name: demo
@@ -76,25 +60,55 @@ plugins:
   - macros:
       j2_variable_start_string: "{{{"
       j2_variable_end_string: "}}}"
-  - material-plausible
+  - exclude:
+      glob:
+        - "*.etag"
+        - Dockerfile.serve-dev
+        - Makefile*
+        - requirements_pip.txt
+        - requirements.txt
+  - include-markdown
+
+nav:
+  - Welcome to the docs: index.md
 
 markdown_extensions:
-  - attr_list
-  - md_in_html
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.tabbed:
-      alternate_style: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
+  - callouts
+  - tables
+  - pymdownx.details
+  - pymdownx.highlight: {}
+  - pymdownx.superfences: {}
+  - pymdownx.inlinehilite: {}
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - toc:
       permalink: "#"
+      toc_depth: 3
+  - def_list
+
+extra:
+  docs_repo_name: k0rdent/docs
+  repo_url: https://github.com/k0rdent/kcm
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/k0rdent/kcm
+      name: k0rdent on GitHub
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/k0rdent
+      name: k0rdent on X
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/k0rdent.bsky.social
+      name: k0rdent on BlueSky
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UChXQ6kbvjnAtdZAQpl7Fo4A
+      name: k0rdent on YouTube
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/k0rdent/
+      name: k0rdent on LinkedIn
+  version:
+    provider: mike
+    default: stable
