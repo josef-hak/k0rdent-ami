@@ -1,9 +1,0 @@
-apiVersion: k0rdent.mirantis.com/v1beta1
-kind: Management
-metadata:
-  name: kcm
-  namespace: kcm-system
-spec:
-  providers:
-  - name: projectsveltos
-  release: kcm-1-6-0
