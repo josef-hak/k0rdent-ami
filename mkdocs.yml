@@ -51,8 +51,14 @@ extra_javascript:
   - javascripts/feedback.js
   - javascripts/plausible.js
 
+exclude_docs: |
+  /versions
+
 plugins:
   - search
+  - gen-files:
+      scripts:
+        - scripts/copy_version.py
   - ezglossary:
       section_config:
         - name: demo
