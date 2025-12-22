@@ -6,7 +6,7 @@ on:
       - '**'
     paths:
       - mkdocs.yml
-      - mkdocs/**
+      - docs/**
       - scripts/deploy_web.sh
       - .github/workflows/gh-pages-deploy.yml
 
