@@ -74,6 +74,7 @@ plugins:
         - requirements_pip.txt
         - requirements.txt
   - include-markdown
+  - glightbox # zoom images on click
 
 nav:
   - AWS AMI Image: index.md
