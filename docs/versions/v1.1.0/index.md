@@ -6,12 +6,12 @@
 
 ## Find the latest AMI Image
 
-1. Go to the latest [k0rdent Enterprise AMI Image page](https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1#ImageDetails:imageId=ami-0035dcaa41e1313f7).  
-2. Click upper right corner ![](./img/aws-ami/button1.png){ width="150" }button.
+1. Go to the latest [k0rdent Enterprise AMI Image page](https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1#ImageDetails:imageId=ami-069eaebd1aeb3c312).
+2. Click upper right corner ![](./img/v1.1.0/aws-ami/button1.png){ width="150" }button.
 
 ## Fill the **Launch an instance** form
 
-![](./img/aws-ami/screen1.png)
+![](./img/v1.1.0/aws-ami/screen1.png)
 
 1. ### “**Name**”
 
@@ -67,13 +67,13 @@ Create or use an existing one if you have it. You will need that to access your 
 
 ## Launch k0rdent instance
 
-* Start instance using bottom right button ![](./img/aws-ami/button2.png){ width="150" }
+* Start instance using bottom right button ![](./img/v1.1.0/aws-ami/button2.png){ width="150" }
 
 ## Check your EC2 Instance
 
 * Check your EC2 Instance in “[EC2 \> Instances](https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1#Instances:)” board.
 
-![](./img/aws-ami/screen2.png)
+![](./img/v1.1.0/aws-ami/screen2.png)
 
 * Wait for 2/2 checks passed Status check value.
 
@@ -81,13 +81,13 @@ Create or use an existing one if you have it. You will need that to access your 
 
 * Access your k0rdent instance Web UI using “open address” link from the EC2 instance detail or directly using “**https://\<EC2-instance-IP\>**” from your web browser.
 
-![](./img/aws-ami/screen3.png)
+![](./img/v1.1.0/aws-ami/screen3.png)
 
 * Use default credentials to sign into the k0rdent Web UI:  
   * username: **admin**  
   * password: **admin**
 
-![](./img/aws-ami/screen4.png)
+![](./img/v1.1.0/aws-ami/screen4.png)
 
 ## Manage k0rdent Instance using CLI
 
@@ -104,7 +104,7 @@ ssh -i ~/.ssh/<key-pair-file>.pem ubuntu@<EC2-instance-IP>
 
 * Upon signing in, you’ll be greeted with an overview of available k0rdent commands displayed as the system’s “message of the day,” just like on Linux.
 
-![](./img/aws-ami/screen5.png)
+![](./img/v1.1.0/aws-ami/screen5.png)
 
 ### Change the default Web UI Password
 
@@ -114,7 +114,7 @@ ssh -i ~/.ssh/<key-pair-file>.pem ubuntu@<EC2-instance-IP>
 k0rdent-update-password
 ~~~
 
-![](./img/aws-ami/screen6.png)
+![](./img/v1.1.0/aws-ami/screen6.png)
 
 * After setting the new password, wait for the message confirming that the UI component has been successfully restarted. Then, sign in to the Web UI again using the new password.
 
@@ -133,11 +133,11 @@ export AWS_SESSION_TOKEN="..."
 
 * Now you can set up your k0rdent AWS credentials to be able to create a child cluster in AWS using **k0rdent-setup-aws-credential** **\<Any Name\>** command. 
 
-![](./img/aws-ami/screen7.png)
+![](./img/v1.1.0/aws-ami/screen7.png)
 
 * After the command usage, the aws-credential object is ready to use in your k0rdent Instance.
 
-![](./img/aws-ami/screen8.png)
+![](./img/v1.1.0/aws-ami/screen8.png)
 
 ### Set up your Azure credential
 
@@ -152,8 +152,8 @@ export AZURE_SP_PASSWORD="..."
 
 * No run **k0rdent-setup-azure-credential** command. It will create two Azure credential objects as there is a separated credential object for AKS.
 
-![](./img/aws-ami/screen9.png)
-![](./img/aws-ami/screen10.png)
+![](./img/v1.1.0/aws-ami/screen9.png)
+![](./img/v1.1.0/aws-ami/screen10.png)
 
 ### Set up your GCP (Google cloud) credential
 
@@ -165,8 +165,8 @@ export GCP_B64ENCODED_CREDENTIALS="..."
 
 * No run **k0rdent-setup-gcp-credential** command. It will create GCP credential object.
 
-![](./img/aws-ami/screen11.png)
-![](./img/aws-ami/screen12.png)
+![](./img/v1.1.0/aws-ami/screen11.png)
+![](./img/v1.1.0/aws-ami/screen12.png)
 
 ## Deploy AWS cluster
 
@@ -175,7 +175,7 @@ export GCP_B64ENCODED_CREDENTIALS="..."
 * Namespace: **kcm-system**  
 * Cluster Template: **AWS \> aws-standalone-cp-1-0-12**
 
-![](./img/aws-ami/screen13.png)
+![](./img/v1.1.0/aws-ami/screen13.png)
 
 * Provider Credential: **aws-cred-demo**  
 * Use YAML config mode and paste simple configuration:
@@ -195,21 +195,21 @@ workersNumber: 1
 * Add cluster label: **“group”: “demo”.**  
 * Click **Create Cluster**.
 
-![](./img/aws-ami/screen14.png)
+![](./img/v1.1.0/aws-ami/screen14.png)
 
 * Wait for cluster **Ready** state.
 
-![](./img/aws-ami/screen15.png)
+![](./img/v1.1.0/aws-ami/screen15.png)
 
 ## Install Service templates
 
 * Install **ingress-nginx** and **kubecost** service templates from **Addons** menu.
 
-![](./img/aws-ami/screen16.png)
+![](./img/v1.1.0/aws-ami/screen16.png)
 
 * Use default values:
 
-| ![](./img/aws-ami/screen17.png) | ![](./img/aws-ami/screen18.png) |
+| ![](./img/v1.1.0/aws-ami/screen17.png) | ![](./img/v1.1.0/aws-ami/screen18.png) |
 | :---- | :---- |
 
 ## Create services
@@ -219,37 +219,37 @@ workersNumber: 1
 * Set values from the screenshot.  
 * Ensure proper cluster labels to select the cluster created before.
 
-![](./img/aws-ami/screen19.png)
+![](./img/v1.1.0/aws-ami/screen19.png)
 
 * Copy Helm values from [Catalog page](https://catalog.k0rdent.io/latest/apps/ingress-nginx/#verify-service-template).
 
-![](./img/aws-ami/screen20.png)
+![](./img/v1.1.0/aws-ami/screen20.png)
 
 * Click **Create Service**  
 * Wait for **Ready** status, and there should be 1 cluster assigned.
 
-![](./img/aws-ami/screen21.png)
+![](./img/v1.1.0/aws-ami/screen21.png)
 
 ### Kubecost
 
 * Deploy similarly to ingress-nginx.  
 * Copy Helm values from [Catalog item](https://catalog.k0rdent.io/latest/apps/kubecost/#install-template-to-k0rdent).
 
-![](./img/aws-ami/screen22.png)
+![](./img/v1.1.0/aws-ami/screen22.png)
 
 * Wait for **Ready** status again:
 
-![](./img/aws-ami/screen23.png)
+![](./img/v1.1.0/aws-ami/screen23.png)
 
 ### Access Web App
 
 * Use CLI command **k0rdent-show-ingress aws-demo-cluster**:
 
-![](./img/aws-ami/screen24.png)
+![](./img/v1.1.0/aws-ami/screen24.png)
 
 * Use the address to access the app:
 
-![](./img/aws-ami/screen25.png)
+![](./img/v1.1.0/aws-ami/screen25.png)
 
 ## Deploy Azure Cluster
 
@@ -258,13 +258,12 @@ workersNumber: 1
 * Namespace: **kcm-system**  
 * Cluster Template: **Azure \> azure-standalone-cp-1-0-13**
 
-![](./img/aws-ami/screen26.png)
+![](./img/v1.1.0/aws-ami/screen26.png)
 
-* Provider Credential: **azure-credential** (that was created above)  
-* Click on Yaml editor  
-* Delete all default contents  
-* Paste in the following contents and update subscriptionID to match the azure credentials
-
+* Provider Credential: **azure-credential** (that was created above).
+* Click on YAML editor.
+* Delete all default contents.
+* Paste in the following contents and **update subscriptionID** to match the azure credentials.
 
 ~~~yaml
 controlPlaneNumber: 1
@@ -279,17 +278,17 @@ worker:
 
 * Click **Create Cluster**.
 
-![](./img/aws-ami/screen27.png)
+![](./img/v1.1.0/aws-ami/screen27.png)
 
 * Wait for cluster **Ready** state.
 
-![](./img/aws-ami/screen28.png)
+![](./img/v1.1.0/aws-ami/screen28.png)
 
 ### Get ingress addresses
 
 * You can get ingress address of exposed apps:
 
-![](./img/aws-ami/screen29.png)
+![](./img/v1.1.0/aws-ami/screen29.png)
 
 * Then access the given address from the browser (http://\<ip-address\>).
 
@@ -300,10 +299,12 @@ worker:
 * Namespace: **kcm-system**  
 * Cluster Template: **GCP \> gcp-standalone-cp-1-0-12**
 
-![](./img/aws-ami/screen30.png)
+![](./img/v1.1.0/aws-ami/screen30.png)
 
-* Provider Credential: **gcp-credential**  
-* Use YAML config mode, replace  and paste configuration below:
+* Provider Credential: **gcp-credential**.
+* Click on YAML editor.
+* Delete all default contents.
+* Paste in the following contents and **update 'project' field** to match your value.
 
 ~~~yaml
 project: "k0rdent-83792" # your GCP project ID
@@ -324,17 +325,17 @@ workersNumber: 1
 
 * Click **Create Cluster**.
 
-![](./img/aws-ami/screen31.png)
+![](./img/v1.1.0/aws-ami/screen31.png)
 
 * Wait for cluster **Ready** state.
 
-![](./img/aws-ami/screen32.png)
+![](./img/v1.1.0/aws-ami/screen32.png)
 
 ### Get ingress addresses
 
 * You can get ingress address of exposed apps:
 
-![](./img/aws-ami/screen33.png)
+![](./img/v1.1.0/aws-ami/screen33.png)
 
 * Then access the given address from the browser (http://\<ip-address\>).
 
@@ -342,8 +343,8 @@ workersNumber: 1
 
 * You can delete any or all clusters using the **Delete** button.
 
-![](./img/aws-ami/screen34.png)
+![](./img/v1.1.0/aws-ami/screen34.png)
 
 * You will be asked to confirm the deletion.
 
-![](./img/aws-ami/screen35.png)
+![](./img/v1.1.0/aws-ami/screen35.png)
