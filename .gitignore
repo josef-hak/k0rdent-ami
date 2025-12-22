@@ -7,4 +7,4 @@ site/
 .vscode
 __pycache__
 
-docs/aws-ami.md
+docs/index.md
