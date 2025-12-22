@@ -24,3 +24,5 @@ mkdocs/validation_matrix.md
 .vscode
 __pycache__
 hunspell_dict_all.txt
+
+docs/aws-ami.md
