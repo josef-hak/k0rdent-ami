@@ -9,13 +9,6 @@ on:
       - mkdocs/**
       - scripts/deploy_web.sh
       - .github/workflows/gh-pages-deploy.yml
-  pull_request:
-    types: [opened, synchronize, reopened]
-    paths:
-      - mkdocs/**
-      - mkdocs.yml
-      - scripts/deploy_web.sh
-      - .github/workflows/gh-pages-deploy.yml
 
 permissions:
   contents: write
