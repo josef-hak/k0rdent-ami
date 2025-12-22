@@ -22,7 +22,7 @@ mike set-default latest
 # Ensure CNAME file in gh-pages to set custom domain
 git stash
 git checkout gh-pages
-echo "catalog.k0rdent.io" > CNAME
+echo "josca.github.io" > CNAME
 git add CNAME
 git commit -m "Add CNAME to set custom domain"
 git push origin gh-pages -f
