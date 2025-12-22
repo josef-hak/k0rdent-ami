@@ -2,11 +2,11 @@
 
 ## Sign in to your AWS account
 
-1. [Mirantis AWS portal](https://mirantis.awsapps.com/start/#/?tab=accounts)
+1. [Mirantis AWS portal](https://mirantis.awsapps.com/start/#/?tab=accounts){ target="_blank" }
 
 ## Find the latest AMI Image
 
-1. Go to the latest [k0rdent Enterprise AMI Image page](https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1#ImageDetails:imageId=ami-069eaebd1aeb3c312).
+1. Go to the latest [k0rdent Enterprise AMI Image page](https://us-west-1.console.aws.amazon.com/ec2/home?region=us-west-1#ImageDetails:imageId=ami-069eaebd1aeb3c312){ target="_blank" }.
 2. Click upper right corner ![](./img/v1.1.0/aws-ami/button1.png){ width="150" }button.
 
 ## Fill the **Launch an instance** form
