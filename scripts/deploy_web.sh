@@ -12,11 +12,11 @@ fi
 
 # Build gh pages with a different versions support
 rm -rf mkdocs/apps mkdocs/infra
-VERSION="v1.5.0" mkdocs build # generate md files
-VERSION="v1.5.0" mike deploy v1.5.0
+VERSION="v1.1.0" mkdocs build # generate md files
+VERSION="v1.1.0" mike deploy v1.1.0
 rm -rf mkdocs/apps mkdocs/infra
-VERSION="v1.6.0" mkdocs build # generate md files
-VERSION="v1.6.0" mike deploy v1.6.0 latest stable --update-aliases
+VERSION="v1.2.0" mkdocs build # generate md files
+VERSION="v1.2.0" mike deploy v1.2.0 latest stable --update-aliases
 mike set-default latest
 
 # Ensure CNAME file in gh-pages to set custom domain
