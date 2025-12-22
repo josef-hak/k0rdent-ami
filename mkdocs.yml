@@ -76,7 +76,7 @@ plugins:
   - include-markdown
 
 nav:
-  - AWS AMI Image: aws-ami.md
+  - AWS AMI Image: index.md
 
 markdown_extensions:
   - callouts
