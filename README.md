@@ -1,3 +1,3 @@
 # k0rdent Enterprise AWS AMI
 
-Docs: <https://josca.github.io/k0rdent-ami>
+Docs: <https://josef-hak.github.io/k0rdent-ami>
