@@ -16,13 +16,16 @@ VERSION="v1.1.0" mkdocs build # generate md files
 VERSION="v1.1.0" mike deploy v1.1.0
 rm -rf mkdocs/apps mkdocs/infra
 VERSION="v1.2.0" mkdocs build # generate md files
-VERSION="v1.2.0" mike deploy v1.2.0 latest stable --update-aliases
+VERSION="v1.2.0" mike deploy v1.2.0
+rm -rf mkdocs/apps mkdocs/infra
+VERSION="v1.3.1" mkdocs build # generate md files
+VERSION="v1.3.1" mike deploy v1.3.1 latest stable --update-aliases
 mike set-default latest
 
 # Ensure CNAME file in gh-pages to set custom domain
 git stash
 git checkout gh-pages
-echo "josca.github.io" > CNAME
+echo "josef-hak.github.io" > CNAME
 git add CNAME
 git commit -m "Add CNAME to set custom domain"
 git push origin gh-pages -f
