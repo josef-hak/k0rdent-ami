@@ -173,7 +173,7 @@ export GCP_B64ENCODED_CREDENTIALS="..."
 * Use “Clusters \> Create Cluster  
 * Set cluster name, e.g. **aws-demo-cluster**
 * Namespace: **kcm-system**  
-* Cluster Template: **AWS \> aws-standalone-cp-1-0-20**
+* Cluster Template: **AWS \> aws-standalone-cp-1-0-26**
 
 ![](./img/v1.2.0/aws-ami/screen13.png)
 
@@ -256,7 +256,7 @@ workersNumber: 1
 * Use “Clusters \> Create Cluster  
 * Set cluster name, e.g. **azure-demo-cluster**  
 * Namespace: **kcm-system**  
-* Cluster Template: **Azure \> azure-standalone-cp-1-0-19**
+* Cluster Template: **Azure \> azure-standalone-cp-1-0-26**
 
 ![](./img/v1.2.0/aws-ami/screen26.png)
 
@@ -297,7 +297,7 @@ worker:
 * Use “Clusters \> Create Cluster  
 * Set cluster name, e.g. **gcp-demo-cluster**  
 * Namespace: **kcm-system**  
-* Cluster Template: **GCP \> gcp-standalone-cp-1-0-17**
+* Cluster Template: **GCP \> gcp-standalone-cp-1-0-24**
 
 ![](./img/v1.2.0/aws-ami/screen30.png)
 
